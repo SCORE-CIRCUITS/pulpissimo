@@ -39,8 +39,8 @@ VERILATOR_ARGS += -Wno-style \
                   -Wno-unoptflat \
 				  -Wno-blkandnblk
 
-# activate tracing
-VERILATOR_ARGS += --timing --autoflush --trace-fst --trace-structs --trace-params
+# activate timing
+VERILATOR_ARGS += --timing --autoflush
 
 # workaround for Bender not liking it if I add directly DPI C sources to the Bender.yml
 VERILATOR_DPI = \

@@ -538,8 +538,10 @@ module tb_pulp;
 
 `ifdef VERILATOR
   initial begin
-    $dumpfile("dump.vcd");
-    $dumpvars();
+    if ($test$plusargs("vcd")) begin
+      $dumpfile("dump.vcd");
+      $dumpvars();
+    end
   end
 `endif /* VERILATOR */
 
